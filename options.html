@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT Extension Options</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 6px;
+        box-sizing: border-box;
+    }
+    div {
+        margin-bottom: 15px;
+    }
+    button {
+        margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Options</h1>
+
+  <h2>API Key</h2>
+  <input type="text" id="api-key-input" placeholder="Enter API Key">
+  <button id="api-save-btn">Save API Key</button>
+
+  <h2>Gerer vos Experts</h2>
+  <form id="promptForm">
+    <label for="promptTitle">Nom de votre expert </label>
+    <input type="text" id="promptTitle" required>
+    <label for="promptContent">Prompt: </label>
+    <!-- Increase textarea rows and cols to better fit content -->
+    <textarea id="promptContent" rows="4" cols="50" required></textarea>
+    <button type="submit">Sauvegardez cet expert</button>
+  </form>
+  <div id="promptList"></div>
+
+  <h2>Gerez vos personnalites</h2>
+  <form id="personaForm">
+    <label for="personaTitle">Nommez votre humeur </label>
+    <input type="text" id="personaTitle" required>
+    <label for="personaContent">Description de l'humeur </label>
+    <textarea id="personaContent" required></textarea>
+    <button type="submit">Sauvegardez</button>
+  </form>
+  <div id="personaList"></div>
+
+<h2>Selectionnez la version GPT</h2>
+<select id="modelSelection">
+  <option value="gpt-3.5-turbo">GPT-3.5</option>
+  <option value="gpt-4">GPT-4</option>
+</select>
+
+  <script src="options.js"></script>
+</body>
+</html>

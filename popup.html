@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        width: 400px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+      }
+      textarea {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 10px;
+      }
+      #manage-prompts {
+        display: block;
+        margin: 8px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Copywriter GPT 4</h1>
+    <p><strong>Repondez a ce texte</strong></p>
+    <textarea id="selected-text" readonly></textarea>
+    <p><strong>En choisissant:</strong></p>
+    <select id="promptSelect">
+      <option value="">-Une Expertise--</option>
+    </select>
+      <select id="personaSelect">
+<option value="">--Une Humeur--</option>
+</select>
+
+    <!-- Button to open options page -->
+    <button id="manage-prompts">Gerer Prompts</button>
+
+    <p id="selectedPromptOverview"></p>
+    <button id="generate">Generer content</button>
+    <p id="error" style="color: red;"></p>
+    <p><strong>Votre reponse a copier-coller</strong></p>
+    <textarea id="generatedContent" readonly></textarea>
+    <button id="copy" disabled>Copier texte</button>
+    <button id="email" disabled>Envoyer par email</button>
+    <script src="popup.js"></script>
+  </body>
+</html>
